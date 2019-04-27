@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<style>
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position:absolute;
+  background-color: red;
+  margin-left:0;
+  margin-right:auto;
+  
+}
+#right {
+  width: 50px;
+  height: 50px;
+  position:absolute;
+  background-color: green;
+  margin-left:auto;
+  margin-right:0;
+  
+}
+#right1 {
+  width: 50px;
+  height: 50px;
+  position:absolute;
+  background-color: orange;
+  margin-left:auto;
+  margin-right:0;
+  
+}
+#right2{
+  width: 50px;
+  height: 50px;
+  position:absolute;
+  background-color: pink;
+  margin-left:auto;
+  margin-right:0;
+  
+}
+#right3{
+   width: 50px;
+   height: 50px;
+   background-color: blue;
+   margin: 0 auto;
+   position:absolute;
+   left:200px;
+   
+}
+  
+</style>
+<body>
+<p>A rangoli game</p>
+<button onclick="myMove()">red</button>
+<button onclick="myMove1()">green</button>
+<button onclick="myMove2()">orange</button>
+<button onclick="myMove3()">pink</button>
+<button onclick="myMove4()">blue</button><br><br>
+
+<div id ="container">
+   
+    <div id ="animate"></div>
+  <div id="right"></div>
+  <div id="right1"></div>
+  <div id="right2"></div>
+  <div id="right3"></div>
+</div>
+
+<script>
+function myMove() {
+  var elem = document.getElementById("animate");   
+  var pos = 0;
+  var id = setInterval(frame, 0);
+  function frame() {
+    if (pos == 150) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + "px"; 
+      elem.style.left = pos + "px"; 
+    }
+  }
+}
+function myMove1() {
+  var elem = document.getElementById("right");   
+  var pos = 0;
+  var id = setInterval(frame, 0);
+  function frame() {
+    if (pos == 150) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + "px"; 
+      elem.style.right = pos + "px"; 
+    }
+  }
+}
+function myMove2() {
+  var elem = document.getElementById("right1");   
+  var pos = 0;
+  var id = setInterval(frame, 0);
+  function frame() {
+    if (pos == 150) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.bottom = pos + "px"; 
+      elem.style.left = pos + "px"; 
+    }
+  }
+}
+function myMove3() {
+  var elem = document.getElementById("right2");   
+  var pos = 0;
+  var id = setInterval(frame, 0);
+  function frame() {
+    if (pos == 150) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.bottom = pos + "px"; 
+      elem.style.right = pos + "px"; 
+    }
+  }
+}
+
+function myMove4() {
+  var elem = document.getElementById("right3");   
+  var pos = 0;
+  var id = setInterval(frame, 0);
+  function frame() {
+    if (pos == 150) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + "px"; 
+      elem.style.center = pos + "px"; 
+    }
+  }
+}
+
+</script>
+
+</body>
+</html>
